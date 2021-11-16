@@ -1,33 +1,73 @@
 version: "2.0"
 
 intents:
-  - greet
+  - greeting
   - goodbye
   - affirm
+  - info
   - deny
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - name
+  - date
+  - time
+  - query_menu
+  - daily_special
+  - query_drinks
+  - allergens
+  - request_reservation
+  - cancel_reservation
+  - persons
+  - reservation_available
+  - request_delivery
+  - adress
+  - order
+  - end_of_order
+  - confirm_order
 
+actions:
+  - send_menuPDF
+  - send_drinkmenuPDF
+  - send_allergenemenuPDF
+  - query_date
+  - query_reservation_time
+  - query_persons
+  - check_availability
+  - make_reservation
+  - query_reservation_code
+  - query_adress
+  - check_adress
+  - query_date
+  - query_delivery_time
+  - request_order
+  - add_to_order
+  - repeat_order
+  - complete_order
+
+
+entities:
+  - name
+  - date
+  - time
+  - mealnumber
+
+# Hier werden Textpassagen des Bots definiert, wenn keine weitere Action notwendig ist:
 responses:
+  utter_info:
+  - text: "..."
+
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Hey! Welcome To COVID-19 Stats Bot.\nYou Can Ask Me about Following Info:\n1.To Check Corona Statistics Of Your State Where You Live , Type 'Corona Tracker' or 'corona stats'\n2.What Is COVID-19?\n3.How does Corona Spread?\n4.How does food spread corona virus?\n5.Can warm weather actually stop corona?\n6.Who is more prone to get corona virus infection?\n7.About Community Spread from COVID-19\n8.Preventive Steps to be taken for COVID-19\n9.COVID-19 Symptoms Check\n10.About Vaccine Availability For COVID-19\n11.How To Handle Someone who gets in contact with infected person from COVID-19."
 
   utter_happy:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "GoodBye! Hope To See You Soon !\nJust Type 'hey' or 'hi' anytime to redirect to the Intro Section of The Bot :))"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am a restaurant customer-service bot, developed by Fabius and Felix."
 
 session_config:
   session_expiration_time: 60

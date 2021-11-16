@@ -1,7 +1,7 @@
 version: "2.0"
 
 nlu:
-- intent: greet
+- intent: greeting
   examples: |
     - hey
     - hello
@@ -39,6 +39,15 @@ nlu:
     - of course
     - that sounds good
     - correct
+
+- intent: info
+  examples: |
+    - info
+    - What can you do?
+    - Whats up?
+    - Give me a hint
+    - What are you good for?
+    - Do something
 
 - intent: deny
   examples: |
@@ -90,3 +99,155 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - Am I talking to a bot?
+    - Am I talking to a human?
+    - Who are you?
+    - Who is there?
+
+- intent: name
+  examples: |
+    - [Manfred](name)
+    - My name is [Josu](name)
+    - I am [Daniel](name)
+    - It's [Josh](name)
+
+- intent: date
+  examples: |
+  - On the [01.01.2021](date)
+  - [01.01.2021](date)
+
+- intent: time
+  examples: |
+  - [09:00pm](time)
+  - at [09:00pm](time)
+  - at [09:00pm](time) please
+
+- intent: query_menu
+  examples: |
+  - where can I find the menu?
+  - what's the menu?
+  - what do you have to eat?
+  - what do you have?
+  - what do you offer?
+
+- intent: daily_special
+  examples: |
+  - do you have a daily special?
+  - what's the dish of the day?
+  - you got a weekly special?
+  - daily special?
+  - what can offer today?
+
+- intent: query_drinks
+  examples: |
+  - which drinks do you have?
+  - do you have beer?
+  - do you have soda?
+  - which beers do you have?
+
+- intent: allergens
+  examples: |
+  - what allergens does your menu contain?
+  - any allergens?
+  - allergens?
+
+- intent: request_reservation
+  examples: |
+  - could I reserve a table?
+  - can I make a reservation?
+  - i would like to reserve a table.
+  - do you still have free tables?
+  - do you have any free table?
+  - i would like to make a reservation
+  - please make a reservation for me.
+  - reservation
+
+- intent: cancel_reservation
+  examples: |
+  - could I cancel my reservation?
+  - i would like to cancel my reservation
+  - i would like to cancel my table
+  - please cancel my reservation
+  - cancel reservation
+
+- intent: persons
+  examples: |
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - One
+  - Two
+  - Three
+  - Four
+  - Five
+  - Six
+  - Seven
+  - Eight
+  - Nine
+  - Ten
+  - 1 person
+  - 2 persons
+  - 3 persons
+  - 4 persons
+  - 5 persons
+  - 6 persons
+  - 7 persons
+  - 8 persons
+  - 9 persons
+  - 10 persons
+  - 11 persons
+  - 12 persons
+  - 13 persons
+  - 14 persons
+
+- intent: reservation_available
+  examples: |
+  - yes 
+  - ok
+  - that would be great
+  - sure
+
+- intent: request_delivery
+  examples: |
+  - do you deliver?
+  - do you also deliver?
+  - do you make deliveries?
+  - do you deliver your food?
+  - can i get a delivery?
+  - i would like to order for delivery
+  - can you deliver your menu?
+  - do you take orders?
+  - can I order food?
+
+- intent: adress
+  examples: |
+  - [Vogt-Kölln-Straße 30, 22527 Hamburg](adress)
+
+- intent: order
+  examples: |
+  - [number 1](menu_item)
+  - [no 1](menu_item)
+
+- intent: end_of_order
+  examples: |
+  - that's it
+  - that's all
+  - nothing to add
+  - nothing else
+  - no more
+
+- intent: confirm_order
+  examples: |
+  - confirm

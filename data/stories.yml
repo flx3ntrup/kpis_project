@@ -9,22 +9,81 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
-- story: sad path 1
+- story: sad path
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
 
-- story: sad path 2
+- story: show menu
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: query_menu
+  - action: send_menuPDF
+
+- story: show drinkmenu
+  steps:
+  - intent: query_drinks
+  - action: send_drinkmenuPDF
+
+- story: show allergenes
+  steps:
+  - intent: query_allergene
+  - action: send_allergenemenuPDF
+
+#- story: show product_allergenes
+ # steps:
+ # - intent: allergens
+ # - action: send_allergene_info
+
+- story: reservation_positive
+  steps:
+  - intent: request_reservation
+  - action: query_date
+  - intent: date
+  - action: query_reservation_time
+  - intent: time
+  - action: query_persons
+  - intent: persons
+  - action: check_availability
+  - intent: reservation_available
+  - action: make_reservation
+
+- story: cancel_reservation
+  steps:
+  - intent: cancel_reservation
+  - action: query_reservation_code
+
+- story: delivery_positive
+  steps:
+  - intent: request_delivery
+  - action: query_adress
+  - intent: adress
+  - action: check_adress
+  - action: query_date
+  - intent: date
+  - action: query_delivery_time
+  - intent: time
+  - action: request_order
+  - intent: order
+  - action: add_to_order
+  - intent: end_of_order
+  - action: repeat_order
+  - intent: confirm_order
+  - action: complete_order
+
+- story: delivery_negative
+  steps:
+  - intent: request_delivery
+  - action: query_adress
+  - intent: adress
+  - action: check_adress
+
+- story: info
+  steps:
+  - intent: info
+  - action: utter_info
+
+- story: who am i
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
