@@ -18,17 +18,17 @@ stories:
 - story: show menu
   steps:
   - intent: query_menu
-  - action: send_menuPDF
+  - action: action_send_menuPDF
 
-- story: show drinkmenu
-  steps:
-  - intent: query_drinks
-  - action: send_drinkmenuPDF
+#- story: show drinkmenu
+#  steps:
+#  - intent: query_drinks
+#  - action: action_send_drinkmenuPDF
 
 - story: show allergenes
   steps:
   - intent: query_allergene
-  - action: send_allergenemenuPDF
+  - action: action_send_allergenemenuPDF
 
 #- story: show product_allergenes
  # steps:
@@ -38,45 +38,48 @@ stories:
 - story: reservation_positive
   steps:
   - intent: request_reservation
-  - action: query_date
+  - action: utter_query_date
   - intent: date
-  - action: query_reservation_time
+  - action: utter_query_reservation_time
   - intent: time
-  - action: query_persons
+  - action: utter_query_persons
   - intent: persons
-  - action: check_availability
+  - action: action_check_availability
   - intent: reservation_available
-  - action: make_reservation
+  - action: action_make_reservation
 
 - story: cancel_reservation
   steps:
   - intent: cancel_reservation
-  - action: query_reservation_code
+  - action: utter_query_reservation_code
+  - intent: enter_reservation_code
+  - action: action_cancel_reservation
 
 - story: delivery_positive
   steps:
   - intent: request_delivery
-  - action: query_adress
+  - action: utter_query_adress
   - intent: adress
-  - action: check_adress
-  - action: query_date
+  - action: action_check_adress
+  - action: utter_query_date
   - intent: date
-  - action: query_delivery_time
+  - action: utter_query_delivery_time
   - intent: time
-  - action: request_order
+  - action: utter_request_order
   - intent: order
-  - action: add_to_order
+  - action: action_add_to_order
   - intent: end_of_order
-  - action: repeat_order
+  - action: action_repeat_order
   - intent: confirm_order
-  - action: complete_order
+  - action: action_complete_order
 
 - story: delivery_negative
   steps:
   - intent: request_delivery
-  - action: query_adress
+  - action: utter_query_adress
   - intent: adress
-  - action: check_adress
+  - action: action_check_adress
+  - action: utter_adress_unavailable
 
 - story: info
   steps:

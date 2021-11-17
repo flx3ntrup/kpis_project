@@ -170,6 +170,10 @@ nlu:
   - please cancel my reservation
   - cancel reservation
 
+- intent: enter_cancel_reservation_code
+  examples: |
+  - [RE123456](reservation_code)
+
 - intent: persons
   examples: |
   - 1

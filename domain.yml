@@ -18,6 +18,7 @@ intents:
   - allergens
   - request_reservation
   - cancel_reservation
+  - enter_reservation_code
   - persons
   - reservation_available
   - request_delivery
@@ -27,23 +28,16 @@ intents:
   - confirm_order
 
 actions:
-  - send_menuPDF
-  - send_drinkmenuPDF
-  - send_allergenemenuPDF
-  - query_date
-  - query_reservation_time
-  - query_persons
-  - check_availability
-  - make_reservation
-  - query_reservation_code
-  - query_adress
-  - check_adress
-  - query_date
-  - query_delivery_time
-  - request_order
-  - add_to_order
-  - repeat_order
-  - complete_order
+  - action_send_menuPDF
+  - action_send_drinkmenuPDF
+  - action_send_allergenemenuPDF
+  - action_check_availability
+  - action_make_reservation
+  - action_check_adress
+  - action_add_to_order
+  - action_repeat_order
+  - action_complete_order
+  - action_cancel_reservation
 
 
 entities:
@@ -51,23 +45,48 @@ entities:
   - date
   - time
   - mealnumber
+  - adress
 
 # Hier werden Textpassagen des Bots definiert, wenn keine weitere Action notwendig ist:
 responses:
   utter_info:
-  - text: "..."
+    - text: "Would you like to see the menu?\nThen just ask 'What's the menu?'\n\nWould you like to know the daily special?\nThen just ask 'What's the dish of the day?'\n\nWould you like to reserve a table?\nThen just say 'I would like to make a reservation'.\n\nWould you like to cancel you reservation?\nThen just say 'I would like to cancel my reservation'.\n\nWould you like to order smth for delivery?\nThen just ask 'Do you deliver?'\n\nSo, how can I help you?"
 
   utter_greet:
-  - text: "Hey! Welcome To COVID-19 Stats Bot.\nYou Can Ask Me about Following Info:\n1.To Check Corona Statistics Of Your State Where You Live , Type 'Corona Tracker' or 'corona stats'\n2.What Is COVID-19?\n3.How does Corona Spread?\n4.How does food spread corona virus?\n5.Can warm weather actually stop corona?\n6.Who is more prone to get corona virus infection?\n7.About Community Spread from COVID-19\n8.Preventive Steps to be taken for COVID-19\n9.COVID-19 Symptoms Check\n10.About Vaccine Availability For COVID-19\n11.How To Handle Someone who gets in contact with infected person from COVID-19."
+    - text: "Hey! How are you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+    - text: "Great, carry on!\n How can I help you?"
 
   utter_goodbye:
-  - text: "GoodBye! Hope To See You Soon !\nJust Type 'hey' or 'hi' anytime to redirect to the Intro Section of The Bot :))"
+    - text: "GoodBye! Hope To See You Soon !\nJust Type 'hey' or 'hi' anytime to redirect to the Intro Section of The Bot :))"
 
   utter_iamabot:
-  - text: "I am a restaurant customer-service bot, developed by Fabius and Felix."
+    - text: "I am a restaurant customer-service bot, developed by Fabius and Felix."
+
+  utter_query_date:
+    - text: "For which date?"
+
+  utter_query_reservation_time:
+    - text: "For which time would you like to reservate a table?"
+
+  utter_query_persons:
+    - text: "For how many person would you like to reservate a table?"
+  
+  utter_query_reservation_code:
+    - text: "Could you tell me your reservation code, please?"
+
+  utter_query_adress:
+    - text: "Where should we deliver the food?"
+
+  utter_query_delivery_time:
+    - text: "At which time would you like to receive your food?"
+
+  utter_request_order:
+    - text: "What would you like to order?"
+
+  utter_adress_unavailable:
+    - text: "Sorry, this adress is out of our delivery range"
 
 session_config:
   session_expiration_time: 60
