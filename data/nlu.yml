@@ -174,47 +174,14 @@ nlu:
   examples: |
   - [RE123456](reservation_code)
 
-- intent: persons
+- intent: people
   examples: |
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
-  - 12
-  - 13
-  - 14
-  - 15
-  - One
-  - Two
-  - Three
-  - Four
-  - Five
-  - Six
-  - Seven
-  - Eight
-  - Nine
-  - Ten
-  - 1 person
-  - 2 persons
-  - 3 persons
-  - 4 persons
-  - 5 persons
-  - 6 persons
-  - 7 persons
-  - 8 persons
-  - 9 persons
-  - 10 persons
-  - 11 persons
-  - 12 persons
-  - 13 persons
-  - 14 persons
+  - [1](people)
+  - [2](people)
+  - [One](people)
+  - [Two](people)
+  - [1](people) person
+  - [2](people) people
 
 - intent: reservation_available
   examples: |

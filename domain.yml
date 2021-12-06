@@ -19,7 +19,7 @@ intents:
   - request_reservation
   - cancel_reservation
   - enter_reservation_code
-  - persons
+  - people
   - reservation_available
   - request_delivery
   - adress
@@ -68,10 +68,10 @@ responses:
     - text: "For which date?"
 
   utter_query_reservation_time:
-    - text: "For which time would you like to reservate a table?"
+    - text: "For which time would you like to reserve a table?"
 
-  utter_query_persons:
-    - text: "For how many person would you like to reservate a table?"
+  utter_query_people:
+    - text: "For how many people would you like to reserve a table?"
   
   utter_query_reservation_code:
     - text: "Could you tell me your reservation code, please?"
