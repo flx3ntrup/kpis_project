@@ -65,8 +65,19 @@ responses:
     - text: "I am a restaurant customer-service bot, developed by Fabius and Felix."
 
   utter_query_date:
-    - text: "For which date?"
-
+  - custom:
+      blocks:
+      - type: section
+        text:
+          text: "For which date would you like to make a reservation?"
+          type: mrkdwn
+        accessory:
+          type: datepicker
+          initial_date: '2021-12-08'
+          placeholder:
+            type: plain_text
+            text: Select a date
+   
   utter_query_reservation_time:
     - text: "For which time would you like to reserve a table?"
 
