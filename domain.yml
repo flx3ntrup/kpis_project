@@ -103,7 +103,11 @@ responses:
      - text: "Have a look into our menu!"
       image: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-menu-one-page-flyer-template-86ac26aca2d0e91979f172c5acd7cd5e_screen.jpg"
       
-
+  utter_senddrinkmenu:
+      - text: "Have a look into our drinks menu!"
+      image: "https://img.yumpu.com/4959633/1/500x640/getrankekarte-convikt-stadthotel-amp-restaurant.jpg"
+      
+      
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
