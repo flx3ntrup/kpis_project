@@ -16,7 +16,7 @@ rules:
   steps:
       - intent: request_reservation
       - action: reservation_form
-      - action_loop: name_form
+      - action_loop: reservation_form
 
 
 - rule: submit form
