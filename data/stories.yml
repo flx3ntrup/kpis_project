@@ -4,14 +4,14 @@ stories:
 
 - story: happy path
   steps:
-  - intent: greet
+  - intent: greeting
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
 
 - story: sad path
   steps:
-  - intent: greet
+  - intent: greeting
   - action: utter_greet
   - intent: mood_unhappy
 
@@ -37,7 +37,7 @@ stories:
 
 - story: reservation_positive
   steps:
-  - intent: greet
+  - intent: greeting
   - action: utter_greet
   - intent: request_reservation
   - action: reservation_form

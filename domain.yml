@@ -10,8 +10,8 @@ intents:
   - mood_unhappy
   - bot_challenge
   - name
-  - date
-  - time
+  - give_date
+  - give_time
   - query_menu
   - daily_special
   - query_drinks
