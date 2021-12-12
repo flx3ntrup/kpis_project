@@ -48,6 +48,16 @@ entities:
   - adress
   - persons
 
+slots:
+  date:
+    type: datepicker
+  time:
+    type: text
+  persons:
+      type: float
+      min_value: 1
+      max_value: 10
+
 forms:
   reservation_form:
     date:
@@ -55,16 +65,6 @@ forms:
     time:
       type: text
     persons:
-      type: float
-      min_value: 1
-      max_value: 10
-
-slots:
-  date:
-    type: datepicker
-  time:
-    type: text
-  persons:
       type: float
       min_value: 1
       max_value: 10
