@@ -52,7 +52,7 @@ stories:
     - last_name: 19:00 Uhr
   - slot_was_set:
     - persons: 8 Personen
-  . slot_was_set:
+  - slot_was_set:
     - requested_slot: null
   - active_loop: null
   - action: utter_submit
