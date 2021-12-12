@@ -18,12 +18,12 @@ stories:
 - story: show menu
   steps:
   - intent: query_menu
-  - action: action_send_menuPDF
+  - action: utter_sendMenu
 
-#- story: show drinkmenu
-#  steps:
-#  - intent: query_drinks
-#  - action: action_send_drinkmenuPDF
+- story: show drinkmenu
+  steps:
+  - intent: query_drinks
+  - action: utter_senddrinkmenu
 
 - story: show allergenes
   steps:
