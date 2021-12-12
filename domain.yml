@@ -51,23 +51,22 @@ entities:
 slots:
   date:
     type: datepicker
-    initial_date: '2021-12-11'
-    mapping:     
+    #initial_date: '2021-12-11'
+    mappings:     
     - type: from_entity
-    entity: date
+      entity: date
   time:
     type: text
-    initial_value: None
-    mapping:     
+    #initial_value: None
+    mappings:     
       - type: from_entity
         entity: time
   persons:
       type: float
-      entity: persons
       min_value: 1
       max_value: 10
-      initial_value: 1
-      mapping:     
+      #initial_value: 1
+      mappings:     
         - type: from_entity
           entity: persons
 
