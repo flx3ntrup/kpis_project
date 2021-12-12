@@ -45,11 +45,13 @@ stories:
   - slot_was_set:
     - requested_slot: date
   - slot_was_set:
-    - first_name: 12.12.2021
+    - date: 12.12.2021
   - slot_was_set:
     - requested_slot: time
   - slot_was_set:
-    - last_name: 19:00 Uhr
+    - time: 19:00 Uhr
+  - slot_was_set:
+    - requested_slot: persons
   - slot_was_set:
     - persons: 8 Personen
   - slot_was_set:
