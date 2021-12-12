@@ -37,16 +37,39 @@ stories:
 
 - story: reservation_positive
   steps:
+  - intent: greet
+  - action: utter_greet
   - intent: request_reservation
-  - action: utter_query_date
-  - intent: date
-  - action: utter_query_reservation_time
-  - intent: time
-  - action: utter_query_persons
-  - intent: persons
-  - action: action_check_availability
-  - intent: reservation_available
-  - action: action_make_reservation
+  - action: reservation_form
+  - active_loop: reservation_form
+  - slot_was_set:
+    - requested_slot: date
+  - slot_was_set:
+    - first_name: 12.12.2021
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - last_name: 19:00 Uhr
+  - slot_was_set:
+    - persons: 8 Personen
+  . slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+
+# - story: reservation_positive
+#  steps:
+#  - intent: request_reservation
+#  - action: utter_query_date
+#  - intent: date
+#  - action: utter_query_reservation_time
+#  - intent: time
+#  - action: utter_query_persons
+#  - intent: persons
+#  - action: action_check_availability
+#  - intent: reservation_available
+#  - action: action_make_reservation
 
 - story: cancel_reservation
   steps:
