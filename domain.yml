@@ -50,7 +50,7 @@ entities:
 
 slots:
   date:
-    type: datepicker
+    type: text
     #initial_date: '2021-12-11'
     mappings:     
     - type: from_entity
@@ -72,14 +72,15 @@ slots:
 
 forms:
   reservation_form:
-    date:
-      type: datepicker
-    time:
-      type: text
-    persons:
-      type: float
-      min_value: 1
-      max_value: 10
+    required_slots:
+      - date
+        #type: datepicker
+      - time
+        #type: text
+      - persons
+        #type: float
+        #min_value: 1
+        #max_value: 10
 
 # Hier werden Textpassagen des Bots definiert, wenn keine weitere Action notwendig ist:
 responses:
@@ -134,12 +135,12 @@ responses:
     - text: "Sorry, this adress is out of our delivery range"
     
   utter_sendMenu:
-     - text: "Have a look into our menu!"
-     - image: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-menu-one-page-flyer-template-86ac26aca2d0e91979f172c5acd7cd5e_screen.jpg"
+      - text: "Have a look into our menu!"
+        image: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-menu-one-page-flyer-template-86ac26aca2d0e91979f172c5acd7cd5e_screen.jpg"
       
   utter_senddrinkmenu:
       - text: "Have a look into our drinks menu!"
-      - image: "https://img.yumpu.com/4959633/1/500x640/getrankekarte-convikt-stadthotel-amp-restaurant.jpg"
+        image: "https://img.yumpu.com/4959633/1/500x640/getrankekarte-convikt-stadthotel-amp-restaurant.jpg"
 
   utter_submit:
     - text: "Ok. Thanks!"

@@ -14,7 +14,7 @@ rules:
 
 - rule: activate form
   steps:
-      -intent: request_reservation
+      - intent: request_reservation
       - action: reservation_form
       - action_loop: name_form
 
@@ -26,6 +26,6 @@ rules:
     - action: reservation_form
     - action_loop: null
     - slot_was_set:
-        -requested_slot: null
+        - requested_slot: null
     - action: utter_submit
     - action: utter_slot_values
