@@ -46,6 +46,28 @@ entities:
   - time
   - mealnumber
   - adress
+  - persons
+
+forms:
+  reservation_form:
+    date:
+      type: datepicker
+    time:
+      type: text
+    persons:
+      type: float
+      min_value: 1
+      max_value: 10
+
+slots:
+  date:
+    type: datepicker
+  time:
+    type: text
+  persons:
+      type: float
+      min_value: 1
+      max_value: 10
 
 # Hier werden Textpassagen des Bots definiert, wenn keine weitere Action notwendig ist:
 responses:
@@ -106,7 +128,12 @@ responses:
   utter_senddrinkmenu:
       - text: "Have a look into our drinks menu!"
       image: "https://img.yumpu.com/4959633/1/500x640/getrankekarte-convikt-stadthotel-amp-restaurant.jpg"
-      
+
+  utter_submit:
+    - text: "Ok. Thanks!"
+
+  utter_slots_values:
+    - text: "I will book a table on {date} for {persons} people at {time}"
       
 session_config:
   session_expiration_time: 60
