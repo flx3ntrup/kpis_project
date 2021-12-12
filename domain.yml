@@ -123,11 +123,11 @@ responses:
     
   utter_sendMenu:
      - text: "Have a look into our menu!"
-      image: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-menu-one-page-flyer-template-86ac26aca2d0e91979f172c5acd7cd5e_screen.jpg"
+     - image: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-menu-one-page-flyer-template-86ac26aca2d0e91979f172c5acd7cd5e_screen.jpg"
       
   utter_senddrinkmenu:
       - text: "Have a look into our drinks menu!"
-      image: "https://img.yumpu.com/4959633/1/500x640/getrankekarte-convikt-stadthotel-amp-restaurant.jpg"
+      - image: "https://img.yumpu.com/4959633/1/500x640/getrankekarte-convikt-stadthotel-amp-restaurant.jpg"
 
   utter_submit:
     - text: "Ok. Thanks!"
