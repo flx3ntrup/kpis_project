@@ -16,15 +16,15 @@ rules:
   steps:
       - intent: request_reservation
       - action: reservation_form
-      - action_loop: reservation_form
+      - active_loop: reservation_form
 
 
 - rule: submit form
   condition:
-    - activate_loop: reservation_form
+    - active_loop: reservation_form
   steps:
     - action: reservation_form
-    - action_loop: null
+    - active_loop: null
     - slot_was_set:
         - requested_slot: null
     - action: utter_submit
