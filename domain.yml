@@ -51,18 +51,25 @@ entities:
 slots:
   date:
     type: datepicker
-    entity: date
     initial_date: '2021-12-11'
+    mapping:     
+    - type: from_entity
+    entity: date
   time:
     type: text
-    entity: time
     initial_value: None
+    mapping:     
+      - type: from_entity
+        entity: time
   persons:
       type: float
       entity: persons
       min_value: 1
       max_value: 10
       initial_value: 1
+      mapping:     
+        - type: from_entity
+          entity: persons
 
 forms:
   reservation_form:
