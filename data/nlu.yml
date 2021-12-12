@@ -111,12 +111,12 @@ nlu:
     - I am [Daniel](name)
     - It's [Josh](name)
 
-- intent: date
+- intent: give_date
   examples: |
   - On the [01.01.2021](date)
   - [01.01.2021](date)
 
-- intent: time
+- intent: give_time
   examples: |
   - [09:00pm](time)
   - at [09:00pm](time)
