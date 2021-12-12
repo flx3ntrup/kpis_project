@@ -51,12 +51,15 @@ entities:
 slots:
   date:
     type: datepicker
+    entity: date
     initial_date: '2021-12-11'
   time:
     type: text
+    entity: time
     initial_value: None
   persons:
       type: float
+      entity: persons
       min_value: 1
       max_value: 10
       initial_value: 1
