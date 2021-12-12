@@ -2,6 +2,12 @@ version: "2.0"
 
 rules:
 
+- rule: Say Hello anytime the user says hello
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  
+  
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
