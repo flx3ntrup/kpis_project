@@ -38,6 +38,25 @@ actions:
   - action_repeat_order
   - action_complete_order
   - action_cancel_reservation
+  - utter_info
+  - utter_greet
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_query_date
+  - utter_query_reservation_time
+  - utter_query_people
+  - utter_query_reservation_code
+  - utter_query_adress
+  - utter_query_delivery_time
+  - utter_request_order
+  - utter_adress_unavailable
+  - utter_sendMenu
+  - utter_senddrinkmenu
+  - utter_submit
+  - utter_slots_values
+
+
 
 
 entities:
