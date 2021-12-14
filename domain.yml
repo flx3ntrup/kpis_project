@@ -56,9 +56,6 @@ actions:
   - utter_submit
   - utter_slots_values
 
-
-
-
 entities:
   - name
   - date
