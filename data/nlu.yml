@@ -121,6 +121,10 @@ nlu:
     - [09:00pm](time)
     - at [09:00pm](time)
     - at [09:00pm](time) please
+    - at [09:00am] (time)
+    - at [19:00] time
+    - at [08:00pm]
+    - at [08:00p.m.]
 
 - intent: query_menu
   examples: |
@@ -145,11 +149,11 @@ nlu:
     - do you have soda?
     - which beers do you have?
 
-- intent: allergens
-  examples: |
-    - what allergens does your menu contain?
-    - any allergens?
-    - allergens?
+#- intent: allergens
+#  examples: |
+#    - what allergens does your menu contain?
+#    - any allergens?
+#    - allergens?
 
 - intent: request_reservation
   examples: |
@@ -162,17 +166,17 @@ nlu:
     - please make a reservation for me.
     - reservation
 
-- intent: cancel_reservation
-  examples: |
-    - could I cancel my reservation?
-    - i would like to cancel my reservation
-    - i would like to cancel my table
-    - please cancel my reservation
-    - cancel reservation
+#- intent: cancel_reservation
+#  examples: |
+#    - could I cancel my reservation?
+#    - i would like to cancel my reservation
+#    - i would like to cancel my table
+#    - please cancel my reservation
+#    - cancel reservation
 
-- intent: enter_cancel_reservation_code
-  examples: |
-    - [RE123456](reservation_code)
+#- intent: enter_cancel_reservation_code
+#  examples: |
+#    - [RE123456](reservation_code)
 
 - intent: people
   examples: |
@@ -183,42 +187,42 @@ nlu:
     - [1](people) person
     - [2](people) people
 
-- intent: reservation_available
-  examples: |
-    - yes 
-    - ok
-    - that would be great
-    - sure
+#- intent: reservation_available
+#  examples: |
+#    - yes 
+#    - ok
+#    - that would be great
+#    - sure
 
-- intent: request_delivery
-  examples: |
-    - do you deliver?
-    - do you also deliver?
-    - do you make deliveries?
-    - do you deliver your food?
-    - can i get a delivery?
-    - i would like to order for delivery
-    - can you deliver your menu?
-    - do you take orders?
-    - can I order food?
+#- intent: request_delivery
+#  examples: |
+#    - do you deliver?
+#    - do you also deliver?
+#    - do you make deliveries?
+#    - do you deliver your food?
+#    - can i get a delivery?
+#    - i would like to order for delivery
+#    - can you deliver your menu?
+#    - do you take orders?
+#    - can I order food?
 
-- intent: adress
-  examples: |
-    - [Vogt-Kölln-Straße 30, 22527 Hamburg](adress)
+#- intent: adress
+#  examples: |
+#    - [Vogt-Kölln-Straße 30, 22527 Hamburg](adress)
 
-- intent: order
-  examples: |
-    - [number 1](menu_item)
-    - [no 1](menu_item)
+#- intent: order
+#  examples: |
+#    - [number 1](menu_item)
+#    - [no 1](menu_item)
 
-- intent: end_of_order
-  examples: |
-    - that's it
-    - that's all
-    - nothing to add
-    - nothing else
-    - no more
+#- intent: end_of_order
+#  examples: |
+#    - that's it
+#    - that's all
+#    - nothing to add
+#    - nothing else
+#    - no more
 
-- intent: confirm_order
-  examples: |
-    - confirm
+#- intent: confirm_order
+#  examples: |
+#    - confirm

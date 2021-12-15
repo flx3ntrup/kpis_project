@@ -22,6 +22,17 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: Send the menu anytime the user asks for the menu
+  steps:
+  - intent: query_menu
+  - action: utter_sendMenu
+
+- rule: Send the drinkmenu anytime the user asks for the drinks
+  steps:
+  - intent: query_drinks
+  - action: utter_senddrinks
+
+
 - rule: activate form
   steps:
       - intent: request_reservation
