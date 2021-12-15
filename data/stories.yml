@@ -115,3 +115,44 @@ stories:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- story: interactive_story_1
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: interactive_story_2
+  steps:
+  - intent: request_reservation
+  - action: reservation_form
+  - active_loop: reservation_form
+  - slot_was_set:
+    - requested_slot: date
+  - slot_was_set:
+    - date: 16.12.2021
+  - slot_was_set:
+    - requested_slot: time
+
+- story: interactive_story_3
+  steps:
+  - intent: info
+  - action: utter_info
+  - intent: query_menu
+  - action: utter_sendMenu
+
+- story: interactive_story_1
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: request_reservation
+  - action: reservation_form
+  - active_loop: reservation_form
+  - slot_was_set:
+    - requested_slot: date
+  - intent: give_date
+    entities:
+    - date: 10.10.21
+  - slot_was_set:
+    - date: 10.10.21
