@@ -1,5 +1,4 @@
-version: "2.0"
-
+version: "3.0"
 nlu:
 - intent: greeting
   examples: |
@@ -16,7 +15,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +28,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +36,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: info
   examples: |
     - info
@@ -48,7 +44,6 @@ nlu:
     - Give me a hint
     - What are you good for?
     - Do something
-
 - intent: deny
   examples: |
     - no
@@ -58,7 +53,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -75,7 +69,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -92,7 +85,6 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -103,25 +95,24 @@ nlu:
     - Am I talking to a human?
     - Who are you?
     - Who is there?
-
+    - who are you?
 - intent: name
   examples: |
     - [Manfred](name)
     - My name is [Josu](name)
     - I am [Daniel](name)
     - It's [Josh](name)
-
 - intent: give_date
   examples: |
     - On the [01.01.2021](date)
     - [01.01.2021](date)
-
+    - Felix Entrup für den [16.12.2021](date)
+    - felix [10.10.21](date)
 - intent: give_time
   examples: |
     - [09:00pm](time)
     - at [09:00pm](time)
     - at [09:00pm](time) please
-
 - intent: query_menu
   examples: |
     - where can I find the menu?
@@ -129,7 +120,7 @@ nlu:
     - what do you have to eat?
     - what do you have?
     - what do you offer?
-
+    - whats the menu
 - intent: daily_special
   examples: |
     - do you have a daily special?
@@ -137,20 +128,17 @@ nlu:
     - you got a weekly special?
     - daily special?
     - what can offer today?
-
 - intent: query_drinks
   examples: |
     - which drinks do you have?
     - do you have beer?
     - do you have soda?
     - which beers do you have?
-
 - intent: allergens
   examples: |
     - what allergens does your menu contain?
     - any allergens?
     - allergens?
-
 - intent: request_reservation
   examples: |
     - could I reserve a table?
@@ -161,7 +149,7 @@ nlu:
     - i would like to make a reservation
     - please make a reservation for me.
     - reservation
-
+    - i would like to reserve a table
 - intent: cancel_reservation
   examples: |
     - could I cancel my reservation?
@@ -169,11 +157,9 @@ nlu:
     - i would like to cancel my table
     - please cancel my reservation
     - cancel reservation
-
 - intent: enter_cancel_reservation_code
   examples: |
     - [RE123456](reservation_code)
-
 - intent: people
   examples: |
     - [1](people)
@@ -182,14 +168,12 @@ nlu:
     - [Two](people)
     - [1](people) person
     - [2](people) people
-
 - intent: reservation_available
   examples: |
-    - yes 
+    - yes
     - ok
     - that would be great
     - sure
-
 - intent: request_delivery
   examples: |
     - do you deliver?
@@ -201,16 +185,14 @@ nlu:
     - can you deliver your menu?
     - do you take orders?
     - can I order food?
-
+    - i would like to deliver
 - intent: adress
   examples: |
     - [Vogt-Kölln-Straße 30, 22527 Hamburg](adress)
-
 - intent: order
   examples: |
     - [number 1](menu_item)
     - [no 1](menu_item)
-
 - intent: end_of_order
   examples: |
     - that's it
@@ -218,7 +200,6 @@ nlu:
     - nothing to add
     - nothing else
     - no more
-
 - intent: confirm_order
   examples: |
     - confirm
