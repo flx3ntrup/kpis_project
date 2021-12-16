@@ -133,11 +133,11 @@ responses:
   utter_ask_time:
       - text: "Great! And for which time do you want to have the table?"
 
-   utter_ask_persons:
-      - text: "And for how many people?"
+  utter_ask_persons:
+    - text: "And for how many people?"
 
-   utter_ask_name:
-      - text: "Alright! Now i just need a name for the reservation?"
+  utter_ask_name:
+    - text: "Alright! Now i just need a name for the reservation?"
 
 
   utter_submit:
