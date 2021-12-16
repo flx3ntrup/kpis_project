@@ -30,7 +30,7 @@ rules:
 - rule: Send the drinkmenu anytime the user asks for the drinks
   steps:
   - intent: query_drinks
-  - action: utter_senddrinks
+  - action: utter_senddrinkmenu
 
 
 - rule: activate form
