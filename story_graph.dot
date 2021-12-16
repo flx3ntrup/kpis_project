@@ -4,6 +4,7 @@ digraph  {
 1 [class=active, fontsize=12, label=action_session_start];
 2 [class=active, fontsize=12, label=utter_greet];
 3 [class=active, fontsize=12, label=utter_happy];
+<<<<<<< HEAD
 4 [class="dashed active", fontsize=12, label=action_default_fallback];
 5 [class="intent active", fillcolor=lightblue, label="/greeting", shape=rect, style=filled];
 6 [class="intent active", fillcolor=lightblue, label="/mood_great", shape=rect, style=filled];
@@ -14,4 +15,30 @@ digraph  {
 3 -> 4  [class=active, key=NONE, label=""];
 5 -> 2  [class=active, key=0];
 6 -> 3  [class=active, key=0];
+=======
+4 [class=active, fontsize=12, label=reservation_form];
+6 [class=active, fontsize=12, label=action_default_fallback];
+13 [class="intent dashed active", label="  ?  ", shape=rect];
+14 [class="intent active", fillcolor=lightblue, label="/greeting", shape=rect, style=filled];
+15 [class="intent active", fillcolor=lightblue, label="/mood_great", shape=rect, style=filled];
+16 [class="intent active", fillcolor=lightblue, label="/request_reservation", shape=rect, style=filled];
+17 [class="intent active", fillcolor=lightblue, label="/time", shape=rect, style=filled];
+18 [class="intent active", fillcolor=lightblue, label="/date", shape=rect, style=filled];
+19 [class=intent, fillcolor=lightblue, label="/time", shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 14  [class=active, key=0];
+2 -> 15  [class=active, key=0];
+3 -> 16  [class=active, key=0];
+4 -> 17  [class=active, key=0];
+4 -> 18  [class=active, key=0];
+6 -> 13  [class=active, key=NONE, label=""];
+6 -> 19  [class="", key=0];
+14 -> 2  [class=active, key=0];
+15 -> 3  [class=active, key=0];
+16 -> 4  [class=active, key=0];
+17 -> 6  [class=active, key=0];
+18 -> 4  [class=active, key=0];
+19 -> "-1"  [class="", key=0];
+>>>>>>> 9858dd01b0d52e4ff710070df3ef276100a68b93
 }

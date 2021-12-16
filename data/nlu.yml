@@ -1,5 +1,4 @@
-version: "2.0"
-
+version: "3.0"
 nlu:
 - intent: greeting
   examples: |
@@ -16,7 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - Hello
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +29,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +37,7 @@ nlu:
     - of course
     - that sounds good
     - correct
-
+    - exit
 - intent: info
   examples: |
     - info
@@ -48,7 +46,6 @@ nlu:
     - Give me a hint
     - What are you good for?
     - Do something
-
 - intent: deny
   examples: |
     - no
@@ -58,7 +55,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -75,7 +71,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -92,7 +87,6 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -103,29 +97,34 @@ nlu:
     - Am I talking to a human?
     - Who are you?
     - Who is there?
-
 - intent: name
   examples: |
     - [Manfred](name)
     - My name is [Josu](name)
     - I am [Daniel](name)
     - It's [Josh](name)
-
-- intent: give_date
+- intent: date
   examples: |
     - On the [01.01.2021](date)
     - [01.01.2021](date)
-
-- intent: give_time
+    - [31/10/21] (date)
+- intent: time
   examples: |
     - [09:00pm](time)
     - at [09:00pm](time)
     - at [09:00pm](time) please
     - at [09:00am] (time)
-    - at [19:00] time
-    - at [08:00pm]
-    - at [08:00p.m.]
-
+    - at [19:00] (time)
+    - at [08:00pm] (time)
+    - at [08:00p.m.] (time)
+- intent: people_num
+  examples: |
+    - [1](people_num)
+    - [2](people_num)
+    - [One](people_num)
+    - [Two](people_num)
+    - [1](people_num) person
+    - [2](people_num) people
 - intent: query_menu
   examples: |
     - where can I find the menu?
@@ -133,7 +132,6 @@ nlu:
     - what do you have to eat?
     - what do you have?
     - what do you offer?
-
 - intent: daily_special
   examples: |
     - do you have a daily special?
@@ -141,20 +139,12 @@ nlu:
     - you got a weekly special?
     - daily special?
     - what can offer today?
-
 - intent: query_drinks
   examples: |
     - which drinks do you have?
     - do you have beer?
     - do you have soda?
     - which beers do you have?
-
-#- intent: allergens
-#  examples: |
-#    - what allergens does your menu contain?
-#    - any allergens?
-#    - allergens?
-
 - intent: request_reservation
   examples: |
     - could I reserve a table?
@@ -165,64 +155,3 @@ nlu:
     - i would like to make a reservation
     - please make a reservation for me.
     - reservation
-
-#- intent: cancel_reservation
-#  examples: |
-#    - could I cancel my reservation?
-#    - i would like to cancel my reservation
-#    - i would like to cancel my table
-#    - please cancel my reservation
-#    - cancel reservation
-
-#- intent: enter_cancel_reservation_code
-#  examples: |
-#    - [RE123456](reservation_code)
-
-- intent: people
-  examples: |
-    - [1](people)
-    - [2](people)
-    - [One](people)
-    - [Two](people)
-    - [1](people) person
-    - [2](people) people
-
-#- intent: reservation_available
-#  examples: |
-#    - yes 
-#    - ok
-#    - that would be great
-#    - sure
-
-#- intent: request_delivery
-#  examples: |
-#    - do you deliver?
-#    - do you also deliver?
-#    - do you make deliveries?
-#    - do you deliver your food?
-#    - can i get a delivery?
-#    - i would like to order for delivery
-#    - can you deliver your menu?
-#    - do you take orders?
-#    - can I order food?
-
-#- intent: adress
-#  examples: |
-#    - [Vogt-Kölln-Straße 30, 22527 Hamburg](adress)
-
-#- intent: order
-#  examples: |
-#    - [number 1](menu_item)
-#    - [no 1](menu_item)
-
-#- intent: end_of_order
-#  examples: |
-#    - that's it
-#    - that's all
-#    - nothing to add
-#    - nothing else
-#    - no more
-
-#- intent: confirm_order
-#  examples: |
-#    - confirm
