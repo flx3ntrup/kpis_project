@@ -14,6 +14,7 @@ stories:
   - intent: greeting
   - action: utter_greet
   - intent: mood_unhappy
+  - action: utter_cheer_up
 
 - story: show menu
   steps:
@@ -25,10 +26,10 @@ stories:
   - intent: query_drinks
   - action: utter_senddrinkmenu
 
-- story: show allergenes
-  steps:
-  - intent: query_allergene
-  - action: action_send_allergenemenuPDF
+# - story: show allergenes
+#  steps:
+#  - intent: query_allergene
+#  - action: action_send_allergenemenuPDF
 
 #- story: show product_allergenes
  # steps:
@@ -51,9 +52,9 @@ stories:
   - slot_was_set:
     - time: 19:00 Uhr
   - slot_was_set:
-    - requested_slot: persons
+    - requested_slot: people_num
   - slot_was_set:
-    - persons: 8 Personen
+    - people_num: 8 Personen
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
@@ -73,38 +74,38 @@ stories:
 #  - intent: reservation_available
 #  - action: action_make_reservation
 
-- story: cancel_reservation
-  steps:
-  - intent: cancel_reservation
-  - action: utter_query_reservation_code
-  - intent: enter_reservation_code
-  - action: action_cancel_reservation
+#- story: cancel_reservation
+#  steps:
+#  - intent: cancel_reservation
+#  - action: utter_query_reservation_code
+#  - intent: enter_reservation_code
+#  - action: action_cancel_reservation
 
-- story: delivery_positive
-  steps:
-  - intent: request_delivery
-  - action: utter_query_adress
-  - intent: adress
-  - action: action_check_adress
-  - action: utter_query_date
-  - intent: date
-  - action: utter_query_delivery_time
-  - intent: time
-  - action: utter_request_order
-  - intent: order
-  - action: action_add_to_order
-  - intent: end_of_order
-  - action: action_repeat_order
-  - intent: confirm_order
-  - action: action_complete_order
+#- story: delivery_positive
+#  steps:
+#  - intent: request_delivery
+#  - action: utter_query_adress
+#  - intent: adress
+#  - action: action_check_adress
+#  - action: utter_query_date
+#  - intent: date
+#  - action: utter_query_delivery_time
+#  - intent: time
+#  - action: utter_request_order
+#  - intent: order
+#  - action: action_add_to_order
+#  - intent: end_of_order
+#  - action: action_repeat_order
+#  - intent: confirm_order
+#  - action: action_complete_order
 
-- story: delivery_negative
-  steps:
-  - intent: request_delivery
-  - action: utter_query_adress
-  - intent: adress
-  - action: action_check_adress
-  - action: utter_adress_unavailable
+#- story: delivery_negative
+#  steps:
+#  - intent: request_delivery
+#  - action: utter_query_adress
+#  - intent: adress
+#  - action: action_check_adress
+#  - action: utter_adress_unavailable
 
 - story: info
   steps:
@@ -123,36 +124,9 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
-- story: interactive_story_2
-  steps:
-  - intent: request_reservation
-  - action: reservation_form
-  - active_loop: reservation_form
-  - slot_was_set:
-    - requested_slot: date
-  - slot_was_set:
-    - date: 16.12.2021
-  - slot_was_set:
-    - requested_slot: time
-
 - story: interactive_story_3
   steps:
   - intent: info
   - action: utter_info
   - intent: query_menu
   - action: utter_sendMenu
-
-- story: interactive_story_1
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-  - intent: request_reservation
-  - action: reservation_form
-  - active_loop: reservation_form
-  - slot_was_set:
-    - requested_slot: date
-  - intent: give_date
-    entities:
-    - date: 10.10.21
-  - slot_was_set:
-    - date: 10.10.21

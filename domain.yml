@@ -1,187 +1,139 @@
-version: "2.0"
-
-intents:
-  - greeting
-  - goodbye
-  - affirm
-  - info
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - name
- # - give_date
- # - give_time
-  - query_menu
-  - daily_special
-  - query_drinks
-#  - allergens
-#  - request_reservation
-#  - cancel_reservation
-#  - enter_reservation_code
-  - people
-#  - reservation_available
-#  - request_delivery
-#  - adress
-#  - order
-#  - end_of_order
-#  - confirm_order
-
-actions:
-#  - action_send_menuPDF
-#  - action_send_drinkmenuPDF
-#  - action_send_allergenemenuPDF
-#  - action_check_availability
-#  - action_make_reservation
-#  - action_check_adress
-#  - action_add_to_order
-#  - action_repeat_order
-#  - action_complete_order
-#  - action_cancel_reservation
-  - utter_info
-  - utter_greet
-  - utter_happy
-  - utter_goodbye
-  - utter_iamabot
-  - utter_sendMenu
-  - utter_senddrinkmenu
-  - utter_ask_date
-  - utter_ask_time
-  - utter_ask_persons
-  - utter_ask_name
-  - utter_submit
-  - utter_slots_values
-#  - utter_query_date
-#  - utter_query_reservation_time
-#  - utter_query_people
-#  - utter_query_reservation_code
-#  - utter_query_adress
-#  - utter_query_delivery_time
-#  - utter_request_order
-#  - utter_adress_unavailable
-
-entities:
-  - name
-  - date
-  - time
-  - mealnumber
-  - adress
-  - persons
-
-slots:
-  date:
-    type: text
-    #initial_date: '2021-12-11'
-    mappings:     
-    - type: from_entity
-      entity: date
-  time:
-    type: any
-    #initial_value: None
-    mappings:     
-      - type: from_entity
-        entity: time
-  persons:
-      type: any
-      #initial_value: 1
-      mappings:     
-        - type: from_entity
-          entity: persons
-  name:
-    type: text
-    mappings:
-        - type: from_entity
-          entity: name
-
-forms:
-  reservation_form:
-    required_slots:
-      - date
-      - time
-      - persons
-      - name
-
-# Hier werden Textpassagen des Bots definiert, wenn keine weitere Action notwendig ist:
-responses:
-  utter_info:
-    - text: "Would you like to see the menu?\nThen just ask 'What's the menu?'\n\nWould you like to know the daily special?\nThen just ask 'What's the dish of the day?'\n\nWould you like to reserve a table?\nThen just say 'I would like to make a reservation'.\n\nWould you like to cancel you reservation?\nThen just say 'I would like to cancel my reservation'.\n\nWould you like to order smth for delivery?\nThen just ask 'Do you deliver?'\n\nSo, how can I help you?"
-
-  utter_greet:
-    - text: "Hey! How are you?"
-
-  utter_happy:
-    - text: "Great, carry on!\n How can I help you?"
-
-  utter_goodbye:
-    - text: "GoodBye! Hope To See You Soon !\nJust Type 'hey' or 'hi' anytime to redirect to the Intro Section of The Bot :))"
-
-  utter_iamabot:
-    - text: "I am a restaurant customer-service bot, developed by Fabius and Felix."
-
-    
-  utter_sendMenu:
-      - text: "Have a look into our menu!"
-        image: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-menu-one-page-flyer-template-86ac26aca2d0e91979f172c5acd7cd5e_screen.jpg"
-      
-  utter_senddrinkmenu:
-      - text: "Have a look into our drinks menu!"
-        image: "https://img.yumpu.com/4959633/1/500x640/getrankekarte-convikt-stadthotel-amp-restaurant.jpg"
-
-  utter_ask_date:
-      - text: "For which date would you like to make a reservation?"
-
-  utter_ask_time:
-      - text: "Great! And for which time do you want to have the table?"
-
-   utter_ask_persons:
-      - text: "And for how many people?"
-
-   utter_ask_name:
-      - text: "Alright! Now i just need a name for the reservation?"
-
-
-  utter_submit:
-    - text: "Ok. Thanks!"
-
-  utter_slots_values:
-    - text: "I will book a table on {date} for {persons} people at {time} to the name {name}."
-
-
-     # utter_query_date:
- # - custom:
- #     blocks:
- #     - type: section
- #       text:
- #         text: "For which date would you like to make a reservation?"
- #         type: mrkdwn
- #       accessory:
- #         type: datepicker
- #         initial_date: '2021-12-08'
- #         placeholder:
- #           type: plain_text
- #           text: Select a date
-   
- # utter_query_reservation_time:
- #   - text: "For which time would you like to reserve a table?"
-
- # utter_query_people:
- #   - text: "For how many people would you like to reserve a table?"
-  
- # utter_query_reservation_code:
- #   - text: "Could you tell me your reservation code, please?"
-
- # utter_query_adress:
- #   - text: "Where should we deliver the food?"
-
- # utter_query_delivery_time:
- #   - text: "At which time would you like to receive your food?"
-
- # utter_request_order:
- #   - text: "What would you like to order?"
-
- # utter_adress_unavailable:
- #   - text: "Sorry, this adress is out of our delivery range"
-      
+version: '3.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greeting
+- affirm
+- goodbye
+- info
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- name
+- query_menu
+- daily_special
+- query_drinks
+- request_reservation
+- time
+- date
+- people_num
+entities:
+#- adress
+- date
+#- mealnumber
+- name
+- people_num
+- time
+slots:
+  date:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: date
+  time:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: time
+  people_num:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: people_num
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: name
+responses:
+  utter_info:
+  - text: |-
+      Would you like to see the menu?
+      Then just ask 'What's the menu?'
+
+      Would you like to know the daily special?
+      Then just ask 'What's the dish of the day?'
+
+      Would you like to reserve a table?
+      Then just say 'I would like to make a reservation'.
+
+      Would you like to cancel you reservation?
+      Then just say 'I would like to cancel my reservation'.
+
+      Would you like to order smth for delivery?
+      Then just ask 'Do you deliver?'
+
+      So, how can I help you?
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: |-
+      Great, carry on!
+       How can I help you?
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_goodbye:
+  - text: |-
+      GoodBye! Hope To See You Soon !
+      Just Type 'hey' or 'hi' anytime to redirect to the Intro Section of The Bot :))
+  utter_iamabot:
+  - text: I am a restaurant customer-service bot, developed by Fabius and Felix.
+  utter_sendMenu:
+  - text: Have a look into our menu!
+    image: https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-menu-one-page-flyer-template-86ac26aca2d0e91979f172c5acd7cd5e_screen.jpg
+  utter_senddrinkmenu:
+  - text: Have a look into our drinks menu!
+    image: https://img.yumpu.com/4959633/1/500x640/getrankekarte-convikt-stadthotel-amp-restaurant.jpg
+  utter_ask_date:
+  - text: For which date would you like to make a reservation?
+  utter_ask_time:
+<<<<<<< HEAD
+      - text: "Great! And for which time do you want to have the table?"
+
+  utter_ask_persons:
+    - text: "And for how many people?"
+
+  utter_ask_name:
+    - text: "Alright! Now i just need a name for the reservation?"
+
+
+=======
+  - text: Great! And for which time do you want to have the table?
+  utter_ask_people_num:
+  - text: And for how many people?
+  utter_ask_name:
+  - text: Alright! Now i just need a name for the reservation?
+>>>>>>> 9858dd01b0d52e4ff710070df3ef276100a68b93
+  utter_submit:
+  - text: Ok. Thanks!
+  utter_slots_values:
+  - text: I will book a table on {date} for {people_num} people at {time} to the name {name}.
+actions:
+- utter_ask_date
+- utter_ask_name
+- utter_ask_people_num
+- utter_ask_time
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_cheer_up
+- utter_iamabot
+- utter_info
+- utter_sendMenu
+- utter_senddrinkmenu
+- utter_slots_values
+- utter_submit
+forms:
+  reservation_form:
+    required_slots:
+    - date
+    - time
+    - people_num
+    - name
