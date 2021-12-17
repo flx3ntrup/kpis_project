@@ -42,6 +42,10 @@ rules:
   - intent: query_drinks
   - action: utter_senddrinkmenu
 
+- rule: Tell the daily special anytime the users asks for it
+  steps:
+  - intent: daily_special
+  - action: utter_daily_special
 
 - rule: activate form
   steps:
