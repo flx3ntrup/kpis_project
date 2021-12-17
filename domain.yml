@@ -97,6 +97,8 @@ responses:
   - text: Ok. Thanks!
   utter_slots_values:
   - text: I will book a table on {date} for {people_num} people at {time} to the name {name}.
+  utter_daily_special:
+  - text: Our daily special today are fish and chips! 
 actions:
 - utter_ask_date
 - utter_ask_name
@@ -112,6 +114,7 @@ actions:
 - utter_senddrinkmenu
 - utter_slots_values
 - utter_submit
+- utter_daily_special
 forms:
   reservation_form:
     required_slots:
