@@ -40,6 +40,8 @@ stories:
   steps:
   - intent: greeting
   - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
   - intent: request_reservation
   - action: reservation_form
   - active_loop: reservation_form
@@ -55,6 +57,10 @@ stories:
     - requested_slot: people_num
   - slot_was_set:
     - people_num: 8 Personen
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: Müller
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
@@ -130,3 +136,82 @@ stories:
   - action: utter_info
   - intent: query_menu
   - action: utter_sendMenu
+
+- story: interactive_story_1
+  steps:
+  - intent: greeting
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: request_reservation
+  - action: reservation_form
+  - active_loop: reservation_form
+  - slot_was_set:
+    - requested_slot: date
+  - slot_was_set:
+    - date: 21.12.21
+  - slot_was_set:
+    - date: 21.12.21
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: 8:00pm
+  - slot_was_set:
+    - time: 8:00pm
+  - slot_was_set:
+    - requested_slot: people_num
+  - slot_was_set:
+    - people_num: '5'
+  - slot_was_set:
+    - people_num: '5'
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: Manfred
+  - slot_was_set:
+    - name: Manfred
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+
+- story: interactive_story_2
+  steps:
+  - intent: query_menu
+  - action: utter_sendMenu
+
+- story: interactive_story_3
+  steps:
+  - intent: request_reservation
+  - action: reservation_form
+  - active_loop: reservation_form
+  - slot_was_set:
+    - requested_slot: date
+  - slot_was_set:
+    - date: 21.12.21
+  - slot_was_set:
+    - date: 21.12.21
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: 09:00p.m
+  - slot_was_set:
+    - time: 09:00p.m
+  - slot_was_set:
+    - requested_slot: people_num
+  - slot_was_set:
+    - people_num: '4'
+  - slot_was_set:
+    - people_num: '4'
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: Manfred
+  - slot_was_set:
+    - name: Manfred
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values

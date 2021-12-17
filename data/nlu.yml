@@ -103,11 +103,13 @@ nlu:
     - My name is [Josu](name)
     - I am [Daniel](name)
     - It's [Josh](name)
+    - [Manfred](name)
 - intent: date
   examples: |
     - On the [01.01.2021](date)
     - [01.01.2021](date)
     - [31/10/21] (date)
+    - [21.12.21](date)
 - intent: time
   examples: |
     - [09:00pm](time)
@@ -117,6 +119,8 @@ nlu:
     - at [19:00] (time)
     - at [08:00pm] (time)
     - at [08:00p.m.] (time)
+    - [8:00pm](time)
+    - [09:00p.m](time).
 - intent: people_num
   examples: |
     - [1](people_num)
@@ -125,6 +129,8 @@ nlu:
     - [Two](people_num)
     - [1](people_num) person
     - [2](people_num) people
+    - [5](people_num) people
+    - [4](people_num) people
 - intent: query_menu
   examples: |
     - where can I find the menu?
@@ -132,6 +138,7 @@ nlu:
     - what do you have to eat?
     - what do you have?
     - what do you offer?
+    - What is the menu?
 - intent: daily_special
   examples: |
     - do you have a daily special?
@@ -155,3 +162,5 @@ nlu:
     - i would like to make a reservation
     - please make a reservation for me.
     - reservation
+    - I would like to make a reservation
+    - I want to book a table

@@ -11,6 +11,16 @@ rules:
   steps:
   - intent: greeting
   - action: utter_greet
+
+- rule: Be happy if user is happy
+  steps:
+    - intent: mood_great
+    - action: utter_happy
+
+- rule: Cheer the user up if he is sad
+  steps:
+    - intent: mood_unhappy
+    - action: utter_cheer_up
   
 - rule: Say goodbye anytime the user says goodbye
   steps:

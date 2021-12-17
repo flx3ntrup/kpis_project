@@ -3,51 +3,45 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- request_reservation
+- people_num
 - greeting
+- name
+- mood_great
+- time
+- query_menu
+- date
 - affirm
 - goodbye
 - info
 - deny
-- mood_great
 - mood_unhappy
 - bot_challenge
-- name
-- query_menu
 - daily_special
 - query_drinks
-- request_reservation
-- time
-- date
-- people_num
 entities:
-#- adress
 - date
-#- mealnumber
 - name
 - people_num
 - time
 slots:
   date:
     type: text
-    influence_conversation: false
     mappings:
     - type: from_entity
       entity: date
   time:
     type: text
-    influence_conversation: false
     mappings:
     - type: from_entity
       entity: time
   people_num:
     type: text
-    influence_conversation: false
     mappings:
     - type: from_entity
       entity: people_num
   name:
     type: text
-    influence_conversation: false
     mappings:
     - type: from_entity
       entity: name
@@ -77,8 +71,8 @@ responses:
       Great, carry on!
        How can I help you?
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_goodbye:
   - text: |-
       GoodBye! Hope To See You Soon !
@@ -94,23 +88,11 @@ responses:
   utter_ask_date:
   - text: For which date would you like to make a reservation?
   utter_ask_time:
-<<<<<<< HEAD
-      - text: "Great! And for which time do you want to have the table?"
-
-  utter_ask_persons:
-    - text: "And for how many people?"
-
-  utter_ask_name:
-    - text: "Alright! Now i just need a name for the reservation?"
-
-
-=======
   - text: Great! And for which time do you want to have the table?
   utter_ask_people_num:
   - text: And for how many people?
   utter_ask_name:
   - text: Alright! Now i just need a name for the reservation?
->>>>>>> 9858dd01b0d52e4ff710070df3ef276100a68b93
   utter_submit:
   - text: Ok. Thanks!
   utter_slots_values:
@@ -120,10 +102,10 @@ actions:
 - utter_ask_name
 - utter_ask_people_num
 - utter_ask_time
+- utter_cheer_up
 - utter_goodbye
 - utter_greet
 - utter_happy
-- utter_cheer_up
 - utter_iamabot
 - utter_info
 - utter_sendMenu
