@@ -25,6 +25,11 @@ stories:
   steps:
   - intent: query_drinks
   - action: utter_senddrinkmenu
+  
+- story: daily special
+  steps:
+  - intent: daily_special
+  - action: utter_daily_special
 
 # - story: show allergenes
 #  steps:
